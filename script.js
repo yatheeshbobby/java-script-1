@@ -336,255 +336,527 @@
 
 // employee deatiles
 
-let empName = "John";
-let empAge = 32;
-let empDepartment = "full stack developer";
-let empsalary = 50000;
+// let empName = "John";
+// let empAge = 32;
+// let empDepartment = "full stack developer";
+// let empsalary = 50000;
 
-// store deatils in an object
+// // store deatils in an object
 
-let employee = {
-    name: "John",
-    age: 32,
-    department: "full stack developer",
-    salary: 50000,
-};  
+// let employee = {
+//     name: "John",
+//     age: 32,
+//     department: "full stack developer",
+//     salary: 50000,
+// };  
 
-// print all deatils
+// // print all deatils
 
-console.log("Employee Details:");
-console.log("Name:", employee.name);
-console.log("Age:", employee.age);
-console.log("Department:", employee.department);
-console.log("Salary:", employee.salary);    
+// console.log("Employee Details:");
+// console.log("Name:", employee.name);
+// console.log("Age:", employee.age);
+// console.log("Department:", employee.department);
+// console.log("Salary:", employee.salary);    
 
-// check bonus eligibility
+// // check bonus eligibility
 
-if (employee.salary > 40000) {
-    console.log("Eligible for bonus.");
-} else {
-    console.log("Not eligible for bonus.");
-}
-
-
-// 02 task supermarket billing requirements
-
-// product details
-
-let productName = "Laptop bags";
-let productPrice = 5000;
-let productQuantity = 2; 
-
-// calculate total cost  
-let totalCost = productPrice * productQuantity;
-let discount = 0;
-let finalAmount = 5000;
-
-//apply discount
-
-if (totalCost > 5000) {
-    discount = totalCost * 0.10;
-    finalAmount = totalCost - discount;
-} else {
-    finalAmount = totalCost;
-}
-
-// print bill details
-
-console.log("===== Supermarket Bill =====");
-console.log("Product Name:", productName);
-console.log("Product Price:", productPrice);
-console.log("Product Quantity:", productQuantity);
-console.log("Total Cost:", totalCost);
-console.log("Discount:", discount);
-console.log("Final Amount to be paid:", finalAmount);
+// if (employee.salary > 40000) {
+//     console.log("Eligible for bonus.");
+// } else {
+//     console.log("Not eligible for bonus.");
+// }
 
 
-//03 task student result portal requirements
+// // 02 task supermarket billing requirements
 
-// student details
+// // product details
 
-let studentname = "Rahul";
-let marks = "85";
+// let productName = "Laptop bags";
+// let productPrice = 5000;
+// let productQuantity = 2; 
 
-console.log("student name:", studentname);
-console.log("marks:", marks);
+// // calculate total cost  
+// let totalCost = productPrice * productQuantity;
+// let discount = 0;
+// let finalAmount = 5000;
 
-if (marks >= 90) {
-    console.log("Grade A");
-} else if (marks >= 75) {
-    console.log("Grade B");
-} else if (marks >= 50) {
-    console.log("Grade C");
-} else {
-    console.log("fail");
-}
+// //apply discount
 
-// 04 task bank ATM eligibility requirements
+// if (totalCost > 5000) {
+//     discount = totalCost * 0.10;
+//     finalAmount = totalCost - discount;
+// } else {
+//     finalAmount = totalCost;
+// }
 
-let username = "Ramesh";
-let accountbalance = 10000;
-let withdrawalamount = 5000;
+// // print bill details
 
-console.log("user name:", username);
-console.log("accountbalance:", accountbalance);
-console.log("withdrawalamount:", withdrawalamount);
-
-if (withdrawalamount <= accountbalance) {
-    console.log("transaction successfull");
-} else{
-    console.log("insufficient balance");
-}
+// console.log("===== Supermarket Bill =====");
+// console.log("Product Name:", productName);
+// console.log("Product Price:", productPrice);
+// console.log("Product Quantity:", productQuantity);
+// console.log("Total Cost:", totalCost);
+// console.log("Discount:", discount);
+// console.log("Final Amount to be paid:", finalAmount);
 
 
-// 05 task login validation requirement
+// //03 task student result portal requirements
 
-let username1 = "admin";
-let password = "12345";
+// // student details
 
-let usernameinput = prompt("enter username:");
-let passwordinput = prompt("enter password:");
+// let studentname = "Rahul";
+// let marks = "85";
 
-if (usernameinput === username1 && passwordinput === password) {
-    console.log("login successfull");
-} else {
-    console.log("invalid username or password");
-}
+// console.log("student name:", studentname);
+// console.log("marks:", marks);
+
+// if (marks >= 90) {
+//     console.log("Grade A");
+// } else if (marks >= 75) {
+//     console.log("Grade B");
+// } else if (marks >= 50) {
+//     console.log("Grade C");
+// } else {
+//     console.log("fail");
+// }
+
+// // 04 task bank ATM eligibility requirements
+
+// let username = "Ramesh";
+// let accountbalance = 10000;
+// let withdrawalamount = 5000;
+
+// console.log("user name:", username);
+// console.log("accountbalance:", accountbalance);
+// console.log("withdrawalamount:", withdrawalamount);
+
+// if (withdrawalamount <= accountbalance) {
+//     console.log("transaction successfull");
+// } else{
+//     console.log("insufficient balance");
+// }
 
 
-// 06 online food order requirements
+// // 05 task login validation requirement
 
-let fooditems = ["pizza","burger","pasta","biryani","sandwich","noodles","dosa","ice cream"];
+// let username1 = "admin";
+// let password = "12345";
+
+// let usernameinput = prompt("enter username:");
+// let passwordinput = prompt("enter password:");
+
+// if (usernameinput === username1 && passwordinput === password) {
+//     console.log("login successfull");
+// } else {
+//     console.log("invalid username or password");
+// }
+
+
+// // 06 online food order requirements
+
+// let fooditems = ["pizza","burger","pasta","biryani","sandwich","noodles","dosa","ice cream"];
     
 
-    // first item
-    console.log("first item:", fooditems[0]);
+//     // first item
+//     console.log("first item:", fooditems[0]);
 
-    // last item
-    console.log("last item:", fooditems[fooditems.length - 2]);
+//     // last item
+//     console.log("last item:", fooditems[fooditems.length - 2]);
 
-    // total number of items
-    console.log("total number of items:", fooditems.length);
+//     // total number of items
+//     console.log("total number of items:", fooditems.length);
      
-    //display all food items using for...of
-    console.log("food items:");
-    for (let item of fooditems) {
-        console.log(item);
+//     //display all food items using for...of
+//     console.log("food items:");
+//     for (let item of fooditems) {
+//         console.log(item);
+//     }
+
+
+//     // 07 company employee directory requirements
+
+//     let employer = {
+//         name: "Sunil",
+//         age: "35",
+//         department: "IT",
+//         salary: "45000",
+//         experience: "5 years",
+//     };
+
+//     console.log("employer details:")
+
+//     for (let key in employer) {
+//         console.log(key + " : " + employer[key]);
+//     }
+
+
+
+//     // 08 traffic single system requirement
+
+//     // take signal color from user
+//     let signalcolor = prompt("enter signal color (red, yellow, green):");
+
+//     //convert signal color
+//     signalcolor = signalcolor.toLowerCase();
+
+//     //check signal color
+//     switch (signalcolor) {
+//         case "red":
+//             console.log("signal color: red");
+//             console.log("action: stop"); break;
+
+//             case "yellow":
+//                 console.log("signal color: yellow");
+//                 console.log("action: start"); break;
+
+//                 case "green":
+//                     console.log("signal coloe: green");
+//                     console.log("action: go"); break;
+
+//                     default:
+//                         console.log("invalid signal");
+//     }
+
+
+//     // 09 age category checker requiremants
+
+//     // ask user age
+
+//     let age = "8";
+
+//     // check age category
+//     if (age >= 0 && age <= 12) {
+//         console.log("child");
+//     }
+//     else if (age >= 13 && age <= 19) {
+//         console.log("teenager");
+//     }
+//     else if (age >= 20 && age <= 59) {
+//         console.log("adult");
+//     }
+//     else if (age >= 60) {
+//         console.log("senior citizen");
+//     }
+//     else{
+//         console.log("invalid age")
+//     }
+
+
+//     // 10 employee attendence requirements
+
+
+//     // ask name
+//     let employeername = prompt("Yugesh:");
+
+//     // ask attendance
+//     let attendance = prompt("enter attendance(present/absent):");
+
+//     // ternary operator
+//     let status = attendance.toLowerCase() === "present"
+
+//     ? "attendance: present"
+//     : "attendance: absent";
+
+//     //output
+
+//     console.log("welcome " + employeername);
+//     console.log(status);
+
+
+
+    console.clear()
+
+
+    // 01 Employee management system requirements
+
+    let employers = [
+        { 
+            name: "ramu",
+            ID: 1234,
+            salary:30000,
+        },
+        {
+            name: "lakshman",
+            ID: 4321,
+            salary: 60000,
+        }
+    ];
+
+    for(let emp of employers){
+        console.log("name:", emp.name);
+        console.log("ID:", emp.ID);
+        console.log("salary:", emp.salary);
+
+        if(emp.salary >= 50000){
+            console.log("employers eligible for bonus");
+        } else{
+            console.log("employers not eligible for bonus");
+        }
+    }
+    
+
+    // 02 student result portal requirements
+
+    let studentname = prompt("Roshan:");
+    let marks = Number(prompt("100:"));
+
+    // removed invalid statement
+    let percentage = (marks / 100) * 100;
+    let grade;
+
+    if (percentage >= 90){
+        grade = "A+";
+    } else if (percentage >= 80){
+        grade = "A";
+    } else if (percentage >= 70){
+        grade = "B";
+    } else if (percentage >= 60){
+        grade = "C";
+    } else {
+        grade = "fail";
     }
 
+    console.log("student name:" + studentname);
+    console.log("total marks:" + marks);
+    console.log("percentage:" + percentage);
+    console.log("grade:" + grade);
 
-    // 07 company employee directory requirements
 
-    let employer = {
-        name: "Sunil",
-        age: "35",
-        department: "IT",
-        salary: "45000",
-        experience: "5 years",
-    };
+    // 03 E-commerce cart requirement
 
-    console.log("employer details:")
+    let products = [{name: "laptop", price:50000},{name: "mouse", price:1500},{name: "keyboard", price:2000}];
 
-    for (let key in employer) {
-        console.log(key + " : " + employer[key]);
+    function calculateBill(items) {
+        let total = 0;
+        for (let product of items) {
+            total += product.price;
+        }
+        let discount = 0;
+        if (total > 50000){
+            discount = total * 0.10;
+        }
+        let finalbill = total - discount;
+        console.log("products:");
+        for (let product of items){
+            console.log(product.name + product.price);
+        }
+
+        console.log("total bill:" + total);
+        console.log("discount:" + discount);
+        console.log("finalbill:" + finalbill)
     }
+    calculateBill(products);
+
+// 04 login authentication requirements
+
+let username = "admin";
+let password = "123456";
+
+// user entered values
+
+let enteredusername = "admin";
+let enteredpassword = "123456";
+
+// ternary operator
+let result = (username === enteredusername && password === enteredpassword)
+
+? "login success"
+: "invalid credentials";
+
+console.log(result);
 
 
+// 05 traffic signal system
 
-    // 08 traffic single system requirement
 
-    // take signal color from user
-    let signalcolor = prompt("enter signal color (red, yellow, green):");
+let color = prompt("enter signal color (red, yellow, green):");
 
-    //convert signal color
-    signalcolor = signalcolor.toLowerCase();
+switch(color.toLocaleLowerCase()) {
+    case "red":
+        console.log("stop"); break;
 
-    //check signal color
-    switch (signalcolor) {
-        case "red":
-            console.log("signal color: red");
-            console.log("action: stop"); break;
+    case "yellow":
+        console.log("ready"); break;
 
-            case "yellow":
-                console.log("signal color: yellow");
-                console.log("action: start"); break;
+    case "green":
+        console.log("go"); break;
 
-                case "green":
-                    console.log("signal coloe: green");
-                    console.log("action: go"); break;
+    default:
+        console.log("invalid signal");
+}
 
-                    default:
-                        console.log("invalid signal");
+
+// 06 ATM withdrawal system requirements
+
+
+let balance = 100000;
+let withdrawalamount = 5000;
+
+console.log("avilable balance: ₹" + balance);
+console.log("withdrawal amount: ₹" + withdrawalamount);
+
+if (withdrawalamount <= balance) {
+    balance = balance - withdrawalamount;
+    console.log("withdrawal successful!");
+    console.log("remaining balance: ₹" + balance);
+} else {
+    console.log("insufficient balance!");
+}
+
+
+// 07 online food order requirements
+
+function placeorder(callback) {
+    console.log("order received");
+}
+
+function preparefood(callback) {
+    console.log("preparing food");
+    callback();
+}
+
+function deliverfood() {
+    console.log("food delivered");
+}
+
+placeorder(function(){
+preparefood(function(){
+    deliverfood();
+     });
+});
+
+
+// 08 cashback generator (generator function)
+
+function* cashbackgenerator() {
+    yield "10% cashback";
+    yield "20% cashback";
+    yield "50% cashback";
+    yield "better kuck next time";
+}
+
+let offers = cashbackgenerator();
+
+
+console.log(offers.next().value);
+console.log(offers.next().value);
+console.log(offers.next().value);
+console.log(offers.next().value);
+
+
+// 09 hospital patient check requirement
+
+let age = 25;
+let weight = 60;
+
+console.log("patient details");
+console.log("age:", age);
+console.log("weight:", weight, "kg");
+
+if (age > 18) {
+    if (weight > 50) {
+        console.log("eligible for treatment");
+    } else {
+        console.log("not eligible - weight should be above 50 kg");
     }
+} else {
+    console.log("not eligible - age should be above 18");
+}
 
 
-    // 09 age category checker requiremants
+// 10 final real-time project-mini employee portal
 
-    // ask user age
+// employee array
 
-    let age = "8";
+let employees = [];
+    
 
-    // check age category
-    if (age >= 0 && age <= 12) {
-        console.log("child");
+// add employee(create)
+
+function addemployee(ID, name, salary) {
+    employees.push({
+        ID: ID,
+        name: name,
+        salary: salary
+    });
+    console.log("employee added successfully");
+}
+
+
+function viewemployees() {
+    console.log("\nemployee list:");
+    employees.forEach(emp => {
+        console.log(
+            `ID: ${emp.ID}, name: ${emp.name}, salary: ${emp.salary}`
+        );
+    });
+}
+
+// calculate bonus
+
+function calculateBonus(ID) {
+    let employee = employees.find(emp => emp.ID === ID);
+
+    if (employee) {
+        let bonus = employee.salary * 0.10;
+        console.log(
+            `bonus for ${employee.name}: ₹${bonus}`
+        );
+    } else {
+        console.log("employee not found");
     }
-    else if (age >= 13 && age <= 19) {
-        console.log("teenager");
+} 
+
+// search employee by ID
+
+function searchemployee(ID) {
+    let employee = employees.find(emp => emp.ID === ID);
+
+    if (employee) {
+        console.log("\nemployee found:");
+        console.log(employee);
+    } else {
+        console.log("employee not found");
     }
-    else if (age >= 20 && age <= 59) {
-        console.log("adult");
+}
+
+// delete employee
+
+function deleteemployee(ID) {
+    let index = employees.findIndex(emp => emp.ID === ID);
+
+    if (index !== -1) {
+        employees.splice(index, 1);
+        console.log("employee deleted successfully");
+    } else {
+        console.log("employee not found");
     }
-    else if (age >= 60) {
-        console.log("senior citizen");
-    }
-    else{
-        console.log("invalid age")
-    }
+}
+
+// total employee count
+
+function totalemployees() {
+    console.log(`total employees: ${employees.length}`);
+}
 
 
-    // 10 employee attendence requirements
+// calback function example
+
+function employeeaction(callback) {
+    callback();
+}
 
 
-    // ask name
-    let employeername = prompt("Yugesh:");
+//testing
 
-    // ask attendance
-    let attendance = prompt("enter attendance(present/absent):");
+employeeaction(() => addemployee(101, "rahul", 50000));
+employeeaction(() => addemployee(102, "babblu", 60000));
+employeeaction(() => addemployee(103, "ramana", 70000));
 
-    // ternary operator
-    let status = attendance.toLowerCase() === "present"
+viewemployees();
+calculateBonus(102);
+searchemployee(103);
+deleteemployee(101);
 
-    ? "attendance: present"
-    : "attendance: absent";
-
-    //output
-
-    console.log("welcome " + employeername);
-    console.log(status);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+viewemployees();
+totalemployees();
