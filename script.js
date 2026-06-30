@@ -332,9 +332,9 @@
 
 
 
-// 01 task employee information system
+// // 01 task employee information system
 
-// employee deatiles
+// // employee deatiles
 
 // let empName = "John";
 // let empAge = 32;
@@ -343,7 +343,7 @@
 
 // // store deatils in an object
 
-// let employee = {
+// let employees = {
 //     name: "John",
 //     age: 32,
 //     department: "full stack developer",
@@ -377,7 +377,7 @@
 
 // // calculate total cost  
 // let totalCost = productPrice * productQuantity;
-// let discount = 0;
+// let discounts = 0;
 // let finalAmount = 5000;
 
 // //apply discount
@@ -422,7 +422,7 @@
 
 // // 04 task bank ATM eligibility requirements
 
-// let username = "Ramesh";
+// let usernames = "Ramesh";
 // let accountbalance = 10000;
 // let withdrawalamount = 5000;
 
@@ -440,7 +440,7 @@
 // // 05 task login validation requirement
 
 // let username1 = "admin";
-// let password = "12345";
+// let passwords = "12345";
 
 // let usernameinput = prompt("enter username:");
 // let passwordinput = prompt("enter password:");
@@ -549,10 +549,10 @@
 //     let employeername = prompt("Yugesh:");
 
 //     // ask attendance
-//     let attendance = prompt("enter attendance(present/absent):");
+//     let attendances = prompt("enter attendance(present/absent):");
 
 //     // ternary operator
-//     let status = attendance.toLowerCase() === "present"
+//     let status = attendances.toLowerCase() === "present"
 
 //     ? "attendance: present"
 //     : "attendance: absent";
@@ -564,299 +564,701 @@
 
 
 
-    console.clear()
+//     console.clear()
 
 
-    // 01 Employee management system requirements
+//     // 01 Employee management system requirements
 
-    let employers = [
-        { 
-            name: "ramu",
-            ID: 1234,
-            salary:30000,
-        },
-        {
-            name: "lakshman",
-            ID: 4321,
-            salary: 60000,
-        }
-    ];
+//     let employers = [
+//         { 
+//             name: "ramu",
+//             ID: 1234,
+//             salary:30000,
+//         },
+//         {
+//             name: "lakshman",
+//             ID: 4321,
+//             salary: 60000,
+//         }
+//     ];
 
-    for(let emp of employers){
-        console.log("name:", emp.name);
-        console.log("ID:", emp.ID);
-        console.log("salary:", emp.salary);
+//     for(let emp of employers){
+//         console.log("name:", emp.name);
+//         console.log("ID:", emp.ID);
+//         console.log("salary:", emp.salary);
 
-        if(emp.salary >= 50000){
-            console.log("employers eligible for bonus");
-        } else{
-            console.log("employers not eligible for bonus");
-        }
-    }
+//         if(emp.salary >= 50000){
+//             console.log("employers eligible for bonus");
+//         } else{
+//             console.log("employers not eligible for bonus");
+//         }
+//     }
     
 
-    // 02 student result portal requirements
+//     // 02 student result portal requirements
 
-    let studentname = prompt("Roshan:");
-    let marks = Number(prompt("100:"));
+//     let studentName = prompt("Rahul:");
+//     let marks1 = Number(prompt("100:"));
 
-    // removed invalid statement
-    let percentage = (marks / 100) * 100;
-    let grade;
+//     let percentage = (marks1 / 100) * 100;
+//     let grade;
 
-    if (percentage >= 90){
-        grade = "A+";
-    } else if (percentage >= 80){
-        grade = "A";
-    } else if (percentage >= 70){
-        grade = "B";
-    } else if (percentage >= 60){
-        grade = "C";
+//     if (percentage >= 90){
+//         grade = "A+";
+//     } else if (percentage >= 80){
+//         grade = "A";
+//     } else if (percentage >= 70){
+//         grade = "B";
+//     } else if (percentage >= 60){
+//         grade = "C";
+//     } else {
+//         grade = "fail";
+//     }
+
+//     console.log("student name:" + studentName);
+//     console.log("total marks:" + marks);
+//     console.log("percentage:" + percentage);
+//     console.log("grade:" + grade);
+
+
+//     // 03 E-commerce cart requirement
+
+//     let products = [{name: "laptop", price:50000},{name: "mouse", price:1500},{name: "keyboard", price:2000}];
+
+//     function calculateBill(items) {
+//         let total = 0;
+//         for (let product of items) {
+//             total += product.price;
+//         }
+//         let discount = 0;
+//         if (total > 50000){
+//             discount = total * 0.10;
+//         }
+//         let finalbill = total - discount;
+//         console.log("products:");
+//         for (let product of items){
+//             console.log(product.name + product.price);
+//         }
+
+//         console.log("total bill:" + total);
+//         console.log("discount:" + discount);
+//         console.log("finalbill:" + finalbill)
+//     }
+//     calculateBill(products);
+
+// // 04 login authentication requirements
+
+// let usernames1 = "admin";
+// let passwords1 = "123456";
+
+// // user entered values
+
+// let enteredusername = "admin";
+// let enteredpassword = "123456";
+
+// // ternary operator
+// let results = (username === enteredusername && password === enteredpassword)
+
+// ? "login success"
+// : "invalid credentials";
+
+// console.log(result);
+
+
+// // 05 traffic signal system
+
+
+// let color = prompt("enter signal color (red, yellow, green):");
+
+// switch(color.toLocaleLowerCase()) {
+//     case "red":
+//         console.log("stop"); break;
+
+//     case "yellow":
+//         console.log("ready"); break;
+
+//     case "green":
+//         console.log("go"); break;
+
+//     default:
+//         console.log("invalid signal");
+// }
+
+
+// // 06 ATM withdrawal system requirements
+
+
+// let balance = 100000;
+// let withdrawalsamount = 5000;
+
+// console.log("avilable balance: ₹" + balance);
+// console.log("withdrawal amount: ₹" + withdrawalsamount);
+
+// if (withdrawalamount <= balance) {
+//     balance = balance - withdrawalsamount;
+//     console.log("withdrawal successful!");
+//     console.log("remaining balance: ₹" + balance);
+// } else {
+//     console.log("insufficient balance!");
+// }
+
+
+// // 07 online food order requirements
+
+// function placeorder(callback) {
+//     console.log("order received");
+// }
+
+// function preparefood(callback) {
+//     console.log("preparing food");
+//     callback();
+// }
+
+// function deliverfood() {
+//     console.log("food delivered");
+// }
+
+// placeorder(function(){
+// preparefood(function(){
+//     deliverfood();
+//      });
+// });
+
+
+// // 08 cashback generator (generator function)
+
+// function* cashbackgenerator() {
+//     yield "10% cashback";
+//     yield "20% cashback";
+//     yield "50% cashback";
+//     yield "better kuck next time";
+// }
+
+// let offers = cashbackgenerator();
+
+
+// console.log(offers.next().value);
+// console.log(offers.next().value);
+// console.log(offers.next().value);
+// console.log(offers.next().value);
+
+
+// // 09 hospital patient check requirement
+
+// let ages = 25;
+// let weight = 60;
+
+// console.log("patient details");
+// console.log("age:", age);
+// console.log("weight:", weight, "kg");
+
+// if (age > 18) {
+//     if (weight > 50) {
+//         console.log("eligible for treatment");
+//     } else {
+//         console.log("not eligible - weight should be above 50 kg");
+//     }
+// } else {
+//     console.log("not eligible - age should be above 18");
+// }
+
+
+// // 10 final real-time project-mini employee portal
+
+// // employee array
+
+// let employees1 = [];
+    
+
+// // add employee(create)
+
+// function addemployee(ID, name, salary) {
+//     employees1.push({
+//         ID: ID,
+//         name: name,
+//         salary: salary
+//     });
+//     console.log("employee added successfully");
+// }
+
+
+// function viewemployees() {
+//     console.log("\nemployee list:");
+//     employees1.forEach(emp => {
+//         console.log(
+//             `ID: ${emp.ID}, name: ${emp.name}, salary: ${emp.salary}`
+//         );
+//     });
+// }
+
+// // calculate bonus
+
+// function calculateBonus(ID) {
+//     let employee = employees1.find(emp => emp.ID === ID);
+
+//     if (employee) {
+//         let bonus = employee.salary * 0.10;
+//         console.log(
+//             `bonus for ${employee.name}: ₹${bonus}`
+//         );
+//     } else {
+//         console.log("employee not found");
+//     }
+// } 
+
+// // search employee by ID
+
+// function searchemployee(ID) {
+//     let employee = employees1.find(emp => emp.ID === ID);
+
+//     if (employee) {
+//         console.log("\nemployee found:");
+//         console.log(employee);
+//     } else {
+//         console.log("employee not found");
+//     }
+// }
+
+// // delete employee
+
+// function deleteemployee(ID) {
+//     let index = employees1.findIndex(emp => emp.ID === ID);
+
+//     if (index !== -1) {
+//         employees1.splice(index, 1);
+//         console.log("employee deleted successfully");
+//     } else {
+//         console.log("employee not found");
+//     }
+// }
+
+// // total employee count
+
+// function totalemployees() {
+//     console.log(`total employees: ${employees.length}`);
+// }
+
+
+// // calback function example
+
+// function employeeaction(callback) {
+//     callback();
+// }
+
+
+// //testing
+
+// employeeaction(() => addemployee(101, "rahul", 50000));
+// employeeaction(() => addemployee(102, "babblu", 60000));
+// employeeaction(() => addemployee(103, "ramana", 70000));
+
+// viewemployees();
+// calculateBonus(102);
+// searchemployee(103);
+// deleteemployee(101);
+
+// viewemployees();
+// totalemployees();
+
+console.clear();
+
+
+// task 05
+
+// 01 employee salary problem
+
+function yearlysalary() {
+    let monthlysalary = 45000;
+    let yearlysalary = monthlysalary * 12
+
+    return yearlysalary;
+}
+
+console.log("yearly salary : ₹" + yearlysalary());
+
+// 02 student pass or fail
+
+
+function checkresult(marks) {
+    if (marks >= 35) {
+        return "pass";
     } else {
-        grade = "fail";
+        return "fail";
     }
-
-    console.log("student name:" + studentname);
-    console.log("total marks:" + marks);
-    console.log("percentage:" + percentage);
-    console.log("grade:" + grade);
-
-
-    // 03 E-commerce cart requirement
-
-    let products = [{name: "laptop", price:50000},{name: "mouse", price:1500},{name: "keyboard", price:2000}];
-
-    function calculateBill(items) {
-        let total = 0;
-        for (let product of items) {
-            total += product.price;
-        }
-        let discount = 0;
-        if (total > 50000){
-            discount = total * 0.10;
-        }
-        let finalbill = total - discount;
-        console.log("products:");
-        for (let product of items){
-            console.log(product.name + product.price);
-        }
-
-        console.log("total bill:" + total);
-        console.log("discount:" + discount);
-        console.log("finalbill:" + finalbill)
-    }
-    calculateBill(products);
-
-// 04 login authentication requirements
-
-let username = "admin";
-let password = "123456";
-
-// user entered values
-
-let enteredusername = "admin";
-let enteredpassword = "123456";
-
-// ternary operator
-let result = (username === enteredusername && password === enteredpassword)
-
-? "login success"
-: "invalid credentials";
-
-console.log(result);
-
-
-// 05 traffic signal system
-
-
-let color = prompt("enter signal color (red, yellow, green):");
-
-switch(color.toLocaleLowerCase()) {
-    case "red":
-        console.log("stop"); break;
-
-    case "yellow":
-        console.log("ready"); break;
-
-    case "green":
-        console.log("go"); break;
-
-    default:
-        console.log("invalid signal");
 }
 
+let marks2 = 72;
 
-// 06 ATM withdrawal system requirements
+console.log("student marks:", marks2);
+console.log("result:", checkresult(marks2));
 
+// 03 food bill
 
-let balance = 100000;
-let withdrawalamount = 5000;
-
-console.log("avilable balance: ₹" + balance);
-console.log("withdrawal amount: ₹" + withdrawalamount);
-
-if (withdrawalamount <= balance) {
-    balance = balance - withdrawalamount;
-    console.log("withdrawal successful!");
-    console.log("remaining balance: ₹" + balance);
-} else {
-    console.log("insufficient balance!");
+function totalbill(price, quantity) {
+    return price * quantity;
 }
 
+let bill = totalbill(180 , 3);
+console.log("total bill: ₹" + bill);
 
-// 07 online food order requirements
+// 04 welcome employee
 
-function placeorder(callback) {
+function welcomeemployee(employeename, department) {
+    console.log("welcome:" + employeename);
+    console.log("department:", department);
+}
+
+welcomeemployee("Yatheesh.G", "Full Stack Developer");
+
+// 05  shopping discount
+
+function final_amount(price, discount) {
+    return price - discount;
+}
+
+// give values
+let prices = 65000;
+let discount1 = 500;
+
+console.log("final amount = ₹" + final_amount(prices, discount1));
+
+
+// 06 company login
+
+function loginsuccess(callback) {
+    console.log("login successful");
+    callback();   
+}
+
+function loaddashboard() {
+    console.log("loading dashboard");
+}
+loginsuccess(loaddashboard);
+
+// 07 foof delivery
+
+function processorder(callback) {
     console.log("order received");
-}
-
-function preparefood(callback) {
-    console.log("preparing food");
     callback();
 }
-
-function deliverfood() {
-    console.log("food delivered");
+function deliverysteps() {
+    console.log("preparing food");
+    console.log("out of delivery");
+    console.log("delivered");
 }
 
-placeorder(function(){
-preparefood(function(){
-    deliverfood();
-     });
-});
+processorder(deliverysteps);
 
 
-// 08 cashback generator (generator function)
+// 08 lucky draw
 
-function* cashbackgenerator() {
-    yield "10% cashback";
-    yield "20% cashback";
-    yield "50% cashback";
-    yield "better kuck next time";
+function* luckydraw() {
+    yield "10%"
+    yield "20%"
+    yield "50%"
+    yield "better luck for next time";
 }
 
-let offers = cashbackgenerator();
+const coupons = luckydraw();
 
+console.log(coupons.next().value);
+console.log(coupons.next().value);
+console.log(coupons.next().value);
+console.log(coupons.next().value);
 
-console.log(offers.next().value);
-console.log(offers.next().value);
-console.log(offers.next().value);
-console.log(offers.next().value);
+// 09 employee bonus
 
-
-// 09 hospital patient check requirement
-
-let age = 25;
-let weight = 60;
-
-console.log("patient details");
-console.log("age:", age);
-console.log("weight:", weight, "kg");
-
-if (age > 18) {
-    if (weight > 50) {
-        console.log("eligible for treatment");
-    } else {
-        console.log("not eligible - weight should be above 50 kg");
-    }
-} else {
-    console.log("not eligible - age should be above 18");
+function bonus2(salary) {
+    return function(bonusamount) {
+        console.log("total salary :" , salary + bonusamount);
+    };
 }
+ bonus2(50000)(5000);
+
+ // 10 merge employee deatails
+
+ const employeepersonal = {
+    name: "yashaswini",
+    age: 32,
+    city: "hyderabad"
+ };
+
+ const employeeoffice = {
+    id: 100,
+    department: "IT",
+ };
+
+const employeesalary = {
+
+    salary: 50000,  
+ };
+
+ const employeedeatils = {
+    ...employeepersonal, 
+    ...employeeoffice,
+    ...employeesalary
+ };
+  console.log(employeedeatils);
 
 
-// 10 final real-time project-mini employee portal
+  // 11 shopping cart
 
-// employee array
+  const cart1 = ["laptop", "mouse", "keyboard"];
 
-let employees = [];
+  const cart2 = ["headphones", "usb", "cable", "webcam"];
+
+  const cart3 = ["mobile", "charging cable", "pouch"];
+
+  const mergedcart = [...cart1, ...cart2, ...cart3];
+
+  console.log("merged cart:");
+  console.log(mergedcart);
+
+  // 12 students marks
+
+  function student(name, ...marks) {
+    let total = marks.reduce((sum, marks) => sum + marks, 0);
+    let average = total / marks.length;
+
+    console.log("student :", name);
+    console.log("total marks :", total);
+    console.log("average :", average);
+  }
+
+  student("Yuga", 95, 85, 75, 99);
+
+  // 13 product deatails
+
+  const product = {
+    name: "lenova",
+    price: 65000,
+    brand: "Dell",
+    stock: 20
+  };
+
+  const { name } = product;
+
+  console.log("name:", name);
+  console.log("price:", prices);
+
+
+  // 14 customer details
+
+  const customer = [100, "venkatesh", "Madanapalli", 8179498868];
+   const [id, names, city] = customer;
+   
+   console.log("id :", id);
+   console.log("names :", names);
+   console.log("city :", city);
+
+
+   // 15 add product
+
+   let cart = ["mobile", "laptop"];
+
+   cart.push("headphines");
+
+   console.log("update cart:", cart);
+
+
+   // 16 remove last product
+
+   let cart4 = ["mobile", "laptop", "headphone"];
+
+   console.log("before removing:");
+   console.log(cart);
+
+   let removeproduct = cart.pop();
+
+   console.log("remove pruduct:", removeproduct);
+
+   console.log("after removing:");
+   console.log(cart);
+
+
+   // 17 replace employee 
+
+   let employees2 = ["mahesh", "suresh", "naresh",
+    "sukesh"];
+
+    employees2.splice(2, 1, "naresh");
     
-
-// add employee(create)
-
-function addemployee(ID, name, salary) {
-    employees.push({
-        ID: ID,
-        name: name,
-        salary: salary
-    });
-    console.log("employee added successfully");
-}
+    console.log(employees2);
 
 
-function viewemployees() {
-    console.log("\nemployee list:");
-    employees.forEach(emp => {
-        console.log(
-            `ID: ${emp.ID}, name: ${emp.name}, salary: ${emp.salary}`
-        );
-    });
-}
+    // 18 search product 
 
-// calculate bonus
+    let products2 = ["mouse","keyboard", "monitor", "laptop"];
 
-function calculateBonus(ID) {
-    let employee = employees.find(emp => emp.ID === ID);
+    let isavailable = products2.includes("laptop");
 
-    if (employee) {
-        let bonus = employee.salary * 0.10;
-        console.log(
-            `bonus for ${employee.name}: ₹${bonus}`
-        );
-    } else {
-        console.log("employee not found");
+    console.log("laptop available:", isavailable);
+
+
+    // 19 employee rankings
+
+    const salaries = [25000, 35000, 45000, 55000];
+
+    salaries.sort((a, b) => a - b);
+
+    console.log("salaries (lowest to highest):", salaries);
+
+
+
+    // 20 reverse chat messages
+
+    let messages = ["hi", "hello", "how are you", "good morning/afternoon/night"];
+
+    messages.reverse();
+
+    console.log(messages);
+
+
+
+    // bonus task
+
+    // employee management system
+
+    let employees3 = [];
+
+    // 01 add employees
+
+    function addemployee(id, name, salary) {
+        employees2.push({id, name, salary});
+        console.log("employee added successfully!\n");
     }
-} 
 
-// search employee by ID
+    // 02 view employees
 
-function searchemployee(ID) {
-    let employee = employees.find(emp => emp.ID === ID);
+    function viewemployees() {
+        if (employees2.length === 0) {
+            console.log("no employees not found.\n");
+            return;
+        }
 
-    if (employee) {
-        console.log("\nemployee found:");
-        console.log(employee);
-    } else {
-        console.log("employee not found");
+        console.log("employee list:");
+        employees2.forEach(emp =>{
+            console.log(`id: ${emp.id}, name: ${emp.name}, salary: ₹${emp.salary}`);
+        });
+        console.log();
     }
+
+// 03 search employee by id
+
+function searchemployee(id) {
+    let employee = employees2.find(emp => emp.id === id);
+    if (employee) {
+        console.log(`id: ${employee.id}, name: ${employee.name}, salary: ₹${employee.salary}`);
+    } else {
+        console.log("employee not found.\n");
+    }
+    console.log();
 }
 
-// delete employee
 
-function deleteemployee(ID) {
-    let index = employees.findIndex(emp => emp.ID === ID);
+// 04 calculate salary + bonus
+
+function calculatebonus(id, bonus) {
+    let employee = employees2.find(employee => employee.id === id);
+    if (employee) {
+        console.log(`employee: ${employee.name}`);
+        console.log(`salary: ₹${employee.salary}`);
+        console.log(`bonus: ₹${bonus}`);
+        console.log(`total salary: ₹${employee.salary + bonus}`);
+    } else {
+        console.log("employee not found.\n");
+    }
+    console.log();
+}
+
+
+// 05 remove employee
+
+function removeemployee(id) {
+    let index = employees2.findIndex(e => e.id === id);
 
     if (index !== -1) {
-        employees.splice(index, 1);
-        console.log("employee deleted successfully");
+        let removed = employees2.splice(index, 1)[0];
+        console.log(`removed employee: ${removed.name} (id: ${removed.id})`);
     } else {
-        console.log("employee not found");
+        console.log("employee not found.");
     }
+    console.log();
 }
 
-// total employee count
+// 06 sort employee by salary
 
-function totalemployees() {
-    console.log(`total employees: ${employees.length}`);
+function sortbysalary() {
+    employees2.sort((a, b) => a.salary - b.salary);
+
+    console.log("employees sort by salary:");
+    viewemployees();
 }
 
+// 07 find employee by name
 
-// calback function example
+function findbyname(name) {
+    let employee = employees2.find(employee => employee.name === name);
 
-function employeeaction(callback) {
-    callback();
+    if (employee) {
+        console.log(`employee found: ${employee.name} (id: ${employee.id}, salary: ₹${employee.salary})`);
+    } else {
+        console.log("employee not found.");
+    }
+    console.log();
 }
 
+// 08 display employee details using destructuring
 
-//testing
+function displaydetails(id) {
+    let employee = employees2.find(employee => employee.id === id);
 
-employeeaction(() => addemployee(101, "rahul", 50000));
-employeeaction(() => addemployee(102, "babblu", 60000));
-employeeaction(() => addemployee(103, "ramana", 70000));
+    if (employee) {
+        let {id, name, salary} = employee;
+        
+        console.log("employee2 details:");
+        console.log("id:", id);
+        console.log("name:", name);
+        console.log("salary:", salary);
+    } else {
+        console.log("employee not found.");
+    }
+    console.log();
+}
 
+// data
+
+addemployee(101, "rahul", 30000);
+addemployee(102, "arun", 45000);
+addemployee(103, "john", 35000);
+addemployee(104, "david", 50000);
+
+// view employee
 viewemployees();
-calculateBonus(102);
-searchemployee(103);
-deleteemployee(101);
 
+// search employee
+searchemployee(102);
+
+// calculate bonus
+calculatebonus(103, 5000);
+
+// remove employee 
+removeemployee(101);
+
+// view again
 viewemployees();
-totalemployees();
+
+// sort by salary
+sortbysalary();
+
+// find by name
+findbyname("david");
+
+// destructure
+displaydetails(104);
+
+
+
+
+
+
