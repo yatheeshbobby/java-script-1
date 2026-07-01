@@ -29,6 +29,7 @@
 // console.log("employee age after promotion:", employeeage);
 
 
+// ---------------------------------------------------------------------------------
 
 
 
@@ -330,6 +331,7 @@
 //         arrival location : ${arrivalLocation}`);
 
 
+// -----------------------------------------------------------------------------------
 
 
 // // 01 task employee information system
@@ -566,6 +568,7 @@
 
 //     console.clear()
 
+// ----------------------------------------------------------------------------------------
 
 //     // 01 Employee management system requirements
 
@@ -862,403 +865,850 @@
 
 console.clear();
 
-
+// ----------------------------------------------------------------------------------------
 // task 05
 
 // 01 employee salary problem
 
-function yearlysalary() {
-    let monthlysalary = 45000;
-    let yearlysalary = monthlysalary * 12
+// function yearlysalary() {
+//     let monthlysalary = 45000;
+//     let yearlysalary = monthlysalary * 12
 
-    return yearlysalary;
-}
+//     return yearlysalary;
+// }
 
-console.log("yearly salary : ₹" + yearlysalary());
+// console.log("yearly salary : ₹" + yearlysalary());
 
-// 02 student pass or fail
-
-
-function checkresult(marks) {
-    if (marks >= 35) {
-        return "pass";
-    } else {
-        return "fail";
-    }
-}
-
-let marks2 = 72;
-
-console.log("student marks:", marks2);
-console.log("result:", checkresult(marks2));
-
-// 03 food bill
-
-function totalbill(price, quantity) {
-    return price * quantity;
-}
-
-let bill = totalbill(180 , 3);
-console.log("total bill: ₹" + bill);
-
-// 04 welcome employee
-
-function welcomeemployee(employeename, department) {
-    console.log("welcome:" + employeename);
-    console.log("department:", department);
-}
-
-welcomeemployee("Yatheesh.G", "Full Stack Developer");
-
-// 05  shopping discount
-
-function final_amount(price, discount) {
-    return price - discount;
-}
-
-// give values
-let prices = 65000;
-let discount1 = 500;
-
-console.log("final amount = ₹" + final_amount(prices, discount1));
+// // 02 student pass or fail
 
 
-// 06 company login
+// function checkresult(marks) {
+//     if (marks >= 35) {
+//         return "pass";
+//     } else {
+//         return "fail";
+//     }
+// }
 
-function loginsuccess(callback) {
-    console.log("login successful");
-    callback();   
-}
+// let marks2 = 72;
 
-function loaddashboard() {
-    console.log("loading dashboard");
-}
-loginsuccess(loaddashboard);
+// console.log("student marks:", marks2);
+// console.log("result:", checkresult(marks2));
 
-// 07 foof delivery
+// // 03 food bill
 
-function processorder(callback) {
-    console.log("order received");
-    callback();
-}
-function deliverysteps() {
-    console.log("preparing food");
-    console.log("out of delivery");
-    console.log("delivered");
-}
+// function totalbill(price, quantity) {
+//     return price * quantity;
+// }
 
-processorder(deliverysteps);
+// let bill = totalbill(180 , 3);
+// console.log("total bill: ₹" + bill);
 
+// // 04 welcome employee
 
-// 08 lucky draw
+// function welcomeemployee(employeename, department) {
+//     console.log("welcome:" + employeename);
+//     console.log("department:", department);
+// }
 
-function* luckydraw() {
-    yield "10%"
-    yield "20%"
-    yield "50%"
-    yield "better luck for next time";
-}
+// welcomeemployee("Yatheesh.G", "Full Stack Developer");
 
-const coupons = luckydraw();
+// // 05  shopping discount
 
-console.log(coupons.next().value);
-console.log(coupons.next().value);
-console.log(coupons.next().value);
-console.log(coupons.next().value);
+// function final_amount(price, discount) {
+//     return price - discount;
+// }
 
-// 09 employee bonus
+// // give values
+// let prices = 65000;
+// let discount1 = 500;
 
-function bonus2(salary) {
-    return function(bonusamount) {
-        console.log("total salary :" , salary + bonusamount);
-    };
-}
- bonus2(50000)(5000);
-
- // 10 merge employee deatails
-
- const employeepersonal = {
-    name: "yashaswini",
-    age: 32,
-    city: "hyderabad"
- };
-
- const employeeoffice = {
-    id: 100,
-    department: "IT",
- };
-
-const employeesalary = {
-
-    salary: 50000,  
- };
-
- const employeedeatils = {
-    ...employeepersonal, 
-    ...employeeoffice,
-    ...employeesalary
- };
-  console.log(employeedeatils);
+// console.log("final amount = ₹" + final_amount(prices, discount1));
 
 
-  // 11 shopping cart
+// // 06 company login
 
-  const cart1 = ["laptop", "mouse", "keyboard"];
+// function loginsuccess(callback) {
+//     console.log("login successful");
+//     callback();   
+// }
 
-  const cart2 = ["headphones", "usb", "cable", "webcam"];
+// function loaddashboard() {
+//     console.log("loading dashboard");
+// }
+// loginsuccess(loaddashboard);
 
-  const cart3 = ["mobile", "charging cable", "pouch"];
+// // 07 foof delivery
 
-  const mergedcart = [...cart1, ...cart2, ...cart3];
+// function processorder(callback) {
+//     console.log("order received");
+//     callback();
+// }
+// function deliverysteps() {
+//     console.log("preparing food");
+//     console.log("out of delivery");
+//     console.log("delivered");
+// }
 
-  console.log("merged cart:");
-  console.log(mergedcart);
-
-  // 12 students marks
-
-  function student(name, ...marks) {
-    let total = marks.reduce((sum, marks) => sum + marks, 0);
-    let average = total / marks.length;
-
-    console.log("student :", name);
-    console.log("total marks :", total);
-    console.log("average :", average);
-  }
-
-  student("Yuga", 95, 85, 75, 99);
-
-  // 13 product deatails
-
-  const product = {
-    name: "lenova",
-    price: 65000,
-    brand: "Dell",
-    stock: 20
-  };
-
-  const { name } = product;
-
-  console.log("name:", name);
-  console.log("price:", prices);
+// processorder(deliverysteps);
 
 
-  // 14 customer details
+// // 08 lucky draw
 
-  const customer = [100, "venkatesh", "Madanapalli", 8179498868];
-   const [id, names, city] = customer;
+// function* luckydraw() {
+//     yield "10%"
+//     yield "20%"
+//     yield "50%"
+//     yield "better luck for next time";
+// }
+
+// const coupons = luckydraw();
+
+// console.log(coupons.next().value);
+// console.log(coupons.next().value);
+// console.log(coupons.next().value);
+// console.log(coupons.next().value);
+
+// // 09 employee bonus
+
+// function bonus2(salary) {
+//     return function(bonusamount) {
+//         console.log("total salary :" , salary + bonusamount);
+//     };
+// }
+//  bonus2(50000)(5000);
+
+//  // 10 merge employee deatails
+
+//  const employeepersonal = {
+//     name: "yashaswini",
+//     age: 32,
+//     city: "hyderabad"
+//  };
+
+//  const employeeoffice = {
+//     id: 100,
+//     department: "IT",
+//  };
+
+// const employeesalary = {
+
+//     salary: 50000,  
+//  };
+
+//  const employeedeatils = {
+//     ...employeepersonal, 
+//     ...employeeoffice,
+//     ...employeesalary
+//  };
+//   console.log(employeedeatils);
+
+
+//   // 11 shopping cart
+
+//   const cart1 = ["laptop", "mouse", "keyboard"];
+
+//   const cart2 = ["headphones", "usb", "cable", "webcam"];
+
+//   const cart3 = ["mobile", "charging cable", "pouch"];
+
+//   const mergedcart = [...cart1, ...cart2, ...cart3];
+
+//   console.log("merged cart:");
+//   console.log(mergedcart);
+
+//   // 12 students marks
+
+//   function student(name, ...marks) {
+//     let total = marks.reduce((sum, marks) => sum + marks, 0);
+//     let average = total / marks.length;
+
+//     console.log("student :", name);
+//     console.log("total marks :", total);
+//     console.log("average :", average);
+//   }
+
+//   student("Yuga", 95, 85, 75, 99);
+
+//   // 13 product deatails
+
+//   const product = {
+//     name: "lenova",
+//     price: 65000,
+//     brand: "Dell",
+//     stock: 20
+//   };
+
+//   const { name } = product;
+
+//   console.log("name:", name);
+//   console.log("price:", prices);
+
+
+//   // 14 customer details
+
+//   const customer = [100, "venkatesh", "Madanapalli", 8179498868];
+//    const [id, names, city] = customer;
    
-   console.log("id :", id);
-   console.log("names :", names);
-   console.log("city :", city);
+//    console.log("id :", id);
+//    console.log("names :", names);
+//    console.log("city :", city);
 
 
-   // 15 add product
+//    // 15 add product
 
-   let cart = ["mobile", "laptop"];
+//    let cart = ["mobile", "laptop"];
 
-   cart.push("headphines");
+//    cart.push("headphines");
 
-   console.log("update cart:", cart);
-
-
-   // 16 remove last product
-
-   let cart4 = ["mobile", "laptop", "headphone"];
-
-   console.log("before removing:");
-   console.log(cart);
-
-   let removeproduct = cart.pop();
-
-   console.log("remove pruduct:", removeproduct);
-
-   console.log("after removing:");
-   console.log(cart);
+//    console.log("update cart:", cart);
 
 
-   // 17 replace employee 
+//    // 16 remove last product
 
-   let employees2 = ["mahesh", "suresh", "naresh",
-    "sukesh"];
+//    let cart4 = ["mobile", "laptop", "headphone"];
 
-    employees2.splice(2, 1, "naresh");
+//    console.log("before removing:");
+//    console.log(cart);
+
+//    let removeproduct = cart.pop();
+
+//    console.log("remove pruduct:", removeproduct);
+
+//    console.log("after removing:");
+//    console.log(cart);
+
+
+//    // 17 replace employee 
+
+//    let employees2 = ["mahesh", "suresh", "naresh",
+//     "sukesh"];
+
+//     employees2.splice(2, 1, "naresh");
     
-    console.log(employees2);
+//     console.log(employees2);
 
 
-    // 18 search product 
+//     // 18 search product 
 
-    let products2 = ["mouse","keyboard", "monitor", "laptop"];
+//     let products2 = ["mouse","keyboard", "monitor", "laptop"];
 
-    let isavailable = products2.includes("laptop");
+//     let isavailable = products2.includes("laptop");
 
-    console.log("laptop available:", isavailable);
-
-
-    // 19 employee rankings
-
-    const salaries = [25000, 35000, 45000, 55000];
-
-    salaries.sort((a, b) => a - b);
-
-    console.log("salaries (lowest to highest):", salaries);
+//     console.log("laptop available:", isavailable);
 
 
+//     // 19 employee rankings
 
-    // 20 reverse chat messages
+//     const salaries = [25000, 35000, 45000, 55000];
 
-    let messages = ["hi", "hello", "how are you", "good morning/afternoon/night"];
+//     salaries.sort((a, b) => a - b);
 
-    messages.reverse();
-
-    console.log(messages);
+//     console.log("salaries (lowest to highest):", salaries);
 
 
 
-    // bonus task
+//     // 20 reverse chat messages
 
-    // employee management system
+//     let messages = ["hi", "hello", "how are you", "good morning/afternoon/night"];
 
-    let employees3 = [];
+//     messages.reverse();
 
-    // 01 add employees
-
-    function addemployee(id, name, salary) {
-        employees2.push({id, name, salary});
-        console.log("employee added successfully!\n");
-    }
-
-    // 02 view employees
-
-    function viewemployees() {
-        if (employees2.length === 0) {
-            console.log("no employees not found.\n");
-            return;
-        }
-
-        console.log("employee list:");
-        employees2.forEach(emp =>{
-            console.log(`id: ${emp.id}, name: ${emp.name}, salary: ₹${emp.salary}`);
-        });
-        console.log();
-    }
-
-// 03 search employee by id
-
-function searchemployee(id) {
-    let employee = employees2.find(emp => emp.id === id);
-    if (employee) {
-        console.log(`id: ${employee.id}, name: ${employee.name}, salary: ₹${employee.salary}`);
-    } else {
-        console.log("employee not found.\n");
-    }
-    console.log();
-}
+//     console.log(messages);
 
 
-// 04 calculate salary + bonus
 
-function calculatebonus(id, bonus) {
-    let employee = employees2.find(employee => employee.id === id);
-    if (employee) {
-        console.log(`employee: ${employee.name}`);
-        console.log(`salary: ₹${employee.salary}`);
-        console.log(`bonus: ₹${bonus}`);
-        console.log(`total salary: ₹${employee.salary + bonus}`);
-    } else {
-        console.log("employee not found.\n");
-    }
-    console.log();
-}
+//     // bonus task
+
+//     // employee management system
+
+//     let employees3 = [];
+
+//     // 01 add employees
+
+//     function addemployee(id, name, salary) {
+//         employees2.push({id, name, salary});
+//         console.log("employee added successfully!\n");
+//     }
+
+//     // 02 view employees
+
+//     function viewemployees() {
+//         if (employees2.length === 0) {
+//             console.log("no employees not found.\n");
+//             return;
+//         }
+
+//         console.log("employee list:");
+//         employees2.forEach(emp =>{
+//             console.log(`id: ${emp.id}, name: ${emp.name}, salary: ₹${emp.salary}`);
+//         });
+//         console.log();
+//     }
+
+// // 03 search employee by id
+
+// function searchemployee(id) {
+//     let employee = employees2.find(emp => emp.id === id);
+//     if (employee) {
+//         console.log(`id: ${employee.id}, name: ${employee.name}, salary: ₹${employee.salary}`);
+//     } else {
+//         console.log("employee not found.\n");
+//     }
+//     console.log();
+// }
 
 
-// 05 remove employee
+// // 04 calculate salary + bonus
 
-function removeemployee(id) {
-    let index = employees2.findIndex(e => e.id === id);
+// function calculatebonus(id, bonus) {
+//     let employee = employees2.find(employee => employee.id === id);
+//     if (employee) {
+//         console.log(`employee: ${employee.name}`);
+//         console.log(`salary: ₹${employee.salary}`);
+//         console.log(`bonus: ₹${bonus}`);
+//         console.log(`total salary: ₹${employee.salary + bonus}`);
+//     } else {
+//         console.log("employee not found.\n");
+//     }
+//     console.log();
+// }
 
-    if (index !== -1) {
-        let removed = employees2.splice(index, 1)[0];
-        console.log(`removed employee: ${removed.name} (id: ${removed.id})`);
-    } else {
-        console.log("employee not found.");
-    }
-    console.log();
-}
 
-// 06 sort employee by salary
+// // 05 remove employee
 
-function sortbysalary() {
-    employees2.sort((a, b) => a.salary - b.salary);
+// function removeemployee(id) {
+//     let index = employees2.findIndex(e => e.id === id);
 
-    console.log("employees sort by salary:");
-    viewemployees();
-}
+//     if (index !== -1) {
+//         let removed = employees2.splice(index, 1)[0];
+//         console.log(`removed employee: ${removed.name} (id: ${removed.id})`);
+//     } else {
+//         console.log("employee not found.");
+//     }
+//     console.log();
+// }
 
-// 07 find employee by name
+// // 06 sort employee by salary
 
-function findbyname(name) {
-    let employee = employees2.find(employee => employee.name === name);
+// function sortbysalary() {
+//     employees2.sort((a, b) => a.salary - b.salary);
 
-    if (employee) {
-        console.log(`employee found: ${employee.name} (id: ${employee.id}, salary: ₹${employee.salary})`);
-    } else {
-        console.log("employee not found.");
-    }
-    console.log();
-}
+//     console.log("employees sort by salary:");
+//     viewemployees();
+// }
 
-// 08 display employee details using destructuring
+// // 07 find employee by name
 
-function displaydetails(id) {
-    let employee = employees2.find(employee => employee.id === id);
+// function findbyname(name) {
+//     let employee = employees2.find(employee => employee.name === name);
 
-    if (employee) {
-        let {id, name, salary} = employee;
+//     if (employee) {
+//         console.log(`employee found: ${employee.name} (id: ${employee.id}, salary: ₹${employee.salary})`);
+//     } else {
+//         console.log("employee not found.");
+//     }
+//     console.log();
+// }
+
+// // 08 display employee details using destructuring
+
+// function displaydetails(id) {
+//     let employee = employees2.find(employee => employee.id === id);
+
+//     if (employee) {
+//         let {id, name, salary} = employee;
         
-        console.log("employee2 details:");
-        console.log("id:", id);
-        console.log("name:", name);
-        console.log("salary:", salary);
-    } else {
-        console.log("employee not found.");
+//         console.log("employee2 details:");
+//         console.log("id:", id);
+//         console.log("name:", name);
+//         console.log("salary:", salary);
+//     } else {
+//         console.log("employee not found.");
+//     }
+//     console.log();
+// }
+
+// // data
+
+// addemployee(101, "rahul", 30000);
+// addemployee(102, "arun", 45000);
+// addemployee(103, "john", 35000);
+// addemployee(104, "david", 50000);
+
+// // view employee
+// viewemployees();
+
+// // search employee
+// searchemployee(102);
+
+// // calculate bonus
+// calculatebonus(103, 5000);
+
+// // remove employee 
+// removeemployee(101);
+
+// // view again
+// viewemployees();
+
+// // sort by salary
+// sortbysalary();
+
+// // find by name
+// findbyname("david");
+
+// // destructure
+// displaydetails(104);
+
+// console.clear();
+
+// ----------------------------------------------------------------------------------------
+
+
+// Task 01 find the highest salary
+
+let employee = [{
+
+    name: "rahul",
+    id: 101,
+    salary: 30000
+},
+
+{
+    name: "john",
+    id: 102,
+    salary: 60000
+},
+
+{
+    name: "arun",
+    id: 103,
+    salary: 45000
+},      
+];
+
+let highestemployee = employee[0];
+
+
+for (let i = 1; i < employee.length; i++) {
+    if (employee[i].salary > highestemployee.salary) {
+        highestemployee = employee[i];
     }
-    console.log();
+
+}
+console.log("employee with highest salary:", highestemployee);
+
+console.log("highest salary:", highestemployee.salary);
+console.log("employee name:", highestemployee.name);
+console.log("employee id:", highestemployee.id);
+console.log("----------------------------------------------------");
+
+
+// task 02 find employee by id
+
+let employees = [{
+    name: "rahul",
+    id: 101,
+    salary: 30000
+},
+{
+    name: "john",
+    id: 102,
+    salary: 60000
+},
+{
+    name: "arun",
+    id: 103,
+    salary: 45000
+},
+];
+
+let searchId = 102;
+let employeefound = null;
+
+
+for (let i = 0; i < employees.length; i++) {
+    if (employees[i].id === searchId) {
+        employeefound = employees[i];
+        break;
+    }
 }
 
-// data
+if (employeefound) {
+    console.log("employee found");
+    console.log("name:", employeefound.name);
+    console.log("salary:", employeefound.salary);
+    console.log("id:", employeefound.id);
+} else {
+    console.log("employee not found");
+}
 
-addemployee(101, "rahul", 30000);
-addemployee(102, "arun", 45000);
-addemployee(103, "john", 35000);
-addemployee(104, "david", 50000);
+console.log("----------------------------------------------------");
 
-// view employee
-viewemployees();
+// task 03 calculate salary with bonus
 
-// search employee
-searchemployee(102);
+let employeee1 =[{
+    name: "rahul",
+    id: 101,
+    salary: 30000
+},
+{
+    name: "john",
+    id: 102,
+    salary: 60000   
+},
+{
+    name: "arun",
+    id: 103,
+    salary: 45000
+},
+];
 
-// calculate bonus
-calculatebonus(103, 5000);
+let bonus = 5000;
 
-// remove employee 
-removeemployee(101);
+for (let i = 0; i < employeee1.length; i++) {
+    let totalSalary = employeee1[i].salary + bonus;
+    console.log(employeee1[i].name + " : " + totalSalary);
+}  
 
-// view again
-viewemployees();
+console.log("----------------------------------------------------");
 
-// sort by salary
-sortbysalary();
+// task 04 experience chech 
 
-// find by name
-findbyname("david");
+let employees2 = [
+    
+{
+    name: "rahul",
+    emperience: 5,
+},
 
-// destructure
-displaydetails(104);
+{
+    name: "john",
+    emperience: 8,
+},
+
+{   name: "arun",
+    emperience: 3,  
+},
+];
+
+for (let i = 0; i < employees2.length; i++) {
+    if (employees2[i].emperience >= 5) {
+        console.log(employees2[i].name + "-senior employee");
+    } else {
+        console.log(employees2[i].name + "-junior employee");
+    }
+}
+
+console.log("----------------------------------------------------");
+
+// task 05 display only employee names
+
+let employees3 = [{
+    name: "rahul",
+    id: 101,
+    salary: 30000               
+},
+{
+    name: "john",
+    id: 102,
+    salary: 60000
+},
+{
+    name: "arun",
+    id: 103,
+    salary: 45000
+}
+];
+
+for (let i = 0; i < employees3.length; i++) {
+    console.log(employees3[i].name);
+}
+
+console.log("----------------------------------------------------");
+
+// task 06 display employees ID's
+
+let employees4 = [{
+    name: "rahul",
+    id: 101,        
+}, {
+    name: "john",
+    id: 102,
+}, {
+    name: "arun",
+    id: 103,
+}
+];
+
+for (let i = 0; i < employees4.length; i++) {
+    console.log(employees4[i].id);
+}
+
+console.log("----------------------------------------------------");
+
+// task 07 find total salary
+
+let employees5 = [{
+    name: "rahul",
+    id: 101, 
+    salary: 30000       
+}, {
+    name: "john",
+    id: 102,
+    salary: 60000
+}, {
+    name: "arun",
+    id: 103,
+    salary: 45000
+}
+];
+
+let totalSalary = 0;
+
+for (let i = 0; i < employees5.length; i++) {
+    totalSalary += employees5[i].salary;
+}   
+
+console.log("Total salary:", totalSalary);
+
+console.log("----------------------------------------------------");
+
+// task 08 employees earning more than 40000
+
+let employees6 = [
+    
+
+{    name: "rahul",
+    id: 101,
+    salary: 30000
+},
+{
+    name: "john",
+    id: 102,
+    salary: 60000
+},
+{
+    name: "arun",
+    id: 103,
+    salary: 45000
+}
+];
+
+for (let i = 0; i < employees6.length; i++) {
+    if (employees6[i].salary > 40000) {
+        console.log(employees6[i].name);
+    }
+}
 
 
+console.log("----------------------------------------------------");
+
+// task 09 increase salary increase every employee by 5000
+
+let employees7 = [
+    
+
+{    name: "rahul",
+    id: 101,
+    salary: 30000
+},
+{
+    name: "john",
+    id: 102,
+    salary: 60000
+},
+{
+    name: "arun",
+    id: 103,
+    salary: 45000
+}
+];
+
+for (let i = 0; i < employees7.length; i++) {
+    employees7[i].salary += 5000;
+}
+
+console.log("updated salaries:");
+for (let i = 0; i < employees7.length; i++) {
+    console.log(employees7[i].name + " : " + employees7[i].salary);
+}
 
 
+console.log("----------------------------------------------------");
 
+// task 10 employees report 
+
+let employees8 =[
+{
+    name: "rahul",
+    id: 104,
+    salary: 50000
+},
+{
+    name: "john",
+    id: 105,
+    salary: 60000   
+
+},
+{
+    name: "arun",
+    id: 106,
+    salary: 45000
+}
+];
+
+for (let i = 0; i < employees8.length; i++) {
+    console.log("employee report:");
+    console.log("name:", employees8[i].name);
+    console.log("id:", employees8[i].id);
+    console.log("salary:", employees8[i].salary);
+}  
+
+
+console.log("----------------------------------------------------");
+
+// bonus task 01 challenge task (best for interview)
+
+
+let employees9 = [
+{
+    name: "rahul",
+    id: 101,
+    salary: 30000
+},
+{
+    name: "john",
+    id: 102,
+    salary: 60000
+},
+{
+    name: "arun",
+    id: 103,
+    salary: 45000
+}
+];
+
+// total employees
+
+console.log("total employees:", employees9.length);
+
+// highest salary
+
+let highestEmployee = employees9[0].salary;
+
+for (let i = 0; i < employees9.length; i++) {
+    if (employees9[i].salary > highestEmployee) {
+        highestEmployee = employees9[i].salary;
+    }
+}
+
+console.log("highest employee:", highestEmployee);
+console.log("highest salary:", totalSalary);
+
+// lowest salary
+
+let lowestEmployee = employees9[0].salary;  
+
+for (let i = 0; i < employees9.length; i++) {
+    if (employees9[i].salary < lowestEmployee) {
+        lowestEmployee = employees9[i].salary;
+    }       
+
+    console.log("lowest employee:", lowestEmployee);
+    console.log("lowest salary:", lowestEmployee);
+} 
+
+// total salary
+
+let totalSalary1 = 0;           
+
+for (let i = 0; i < employees9.length; i++) {
+    totalSalary1 += employees9[i].salary;
+
+}
+console.log("total salary:", totalSalary1);
+
+// employee with highest salary
+
+let highestSalaryEmployee = employees9[0];      
+
+for (let i = 1; i < employees9.length; i++) {
+    if (employees9[i].salary > highestSalaryEmployee.salary) {
+        highestSalaryEmployee = employees9[i];
+    }
+    
+    console.log("employee with highest salary:");
+    console.log("name:", highestSalaryEmployee.name);
+    console.log("salary:", highestSalaryEmployee.salary);
+    console.log("employee id:", highestSalaryEmployee.id);
+}
+
+
+// employee with lowest salary
+
+let lowestSalaryEmployee = employees9[0];   
+ for (let i = 1; i < employees9.length; i++) {
+    if (employees9[i].salary < lowestSalaryEmployee.salary) {
+        lowestSalaryEmployee = employees9[i];
+    }
+ }
+ console.log("employee with lowest salary:");
+ console.log("name:", lowestSalaryEmployee.name);
+ console.log("salary:", lowestSalaryEmployee.salary);
+ console.log("employee id:", lowestSalaryEmployee.id);
+
+
+ // employees earning more than 40000
+
+console.log("employees earning more than 40000:");
+
+for (let i = 0; i < employees9.length; i++) {
+    if (employees9[i].salary > 40000) {
+        console.log("name:", employees9[i].name);
+        console.log("salary:", employees9[i].salary);
+    }
+}
+
+// search employee by id
+
+let searchId1 = 102;
+let found = false;   
+
+for (let i = 0; i < employees9.length; i++) {
+    if (employees9[i].id === searchId1) {
+       console.log("employee found:");
+       console.log("name:", employees9[i].name);
+       console.log("salary:", employees9[i].salary);
+       console.log("id:", employees9[i].id);
+       found = true;
+       break;          
+    }   
+}
+
+if (!found) {
+    console.log("employee not found");
+}
+
+// add bonus ₹5000 to all employees
+
+for (let i = 0; i < employees9.length; i++) {
+    employees9[i].salary += 5000;
+}   
+
+console.log("updated salaries after bonus:");
+for (let i = 0; i < employees9.length; i++) {
+    console.log("name:", employees9[i].name);
+    console.log("salary:", employees9[i].salary);
+}
+
+
+// professional employee report
+
+console.log("professional employee report:");
+for (let i = 0; i < employees9.length; i++) {
+    console.log("name:", employees9[i].name);
+    console.log("salary:", employees9[i].salary);
+    console.log("id:", employees9[i].id);
+}
 
